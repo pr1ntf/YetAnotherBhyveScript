@@ -6,6 +6,7 @@ name=win2k8
 ram=1024M
 cpu=1
 disk=win2k8.img
+ss=4096
 iso=win2k8.iso
 tap=tap0
 mac=02:03:05:08:13:21
@@ -16,7 +17,7 @@ bhyve \
 	-c ${cpu} -m ${ram} \
 	-H -w \
 	-s 0,hostbridge \
-	-s 3,ahci-hd,${disk} \
+	-s 3,ahci-hd,${disk},sectorsize=${ss} \
 	-s 4,ahci-cd,${iso} \
 	-s 5,virtio-net,${tap},mac=${mac} \
 	-s 31,lpc \
