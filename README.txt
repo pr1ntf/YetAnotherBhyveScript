@@ -14,7 +14,7 @@ You must provide your own Windows and VirtIO ISO's.
 VirtIO drivers can be downloaded from:
 fetch https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.96/virtio-win-0.1.96.iso
 
-Windows Vista needs an older driver:
+Windows Vista and Windows 2008 need an older driver:
 fetch https://fedorapeople.org/groups/virt/virtio-win/deprecated-isos/archives/virtio-win-0.1-94/virtio-win-0.1-94.iso
 
 Provide your path to your Windows and VirtIO ISO's in extract.sh
