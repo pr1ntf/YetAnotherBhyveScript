@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Yet Another bhyve Script v0.1
+# Yet Another bhyve Script v0.2
 
 name=win2k8
 ram=1024M

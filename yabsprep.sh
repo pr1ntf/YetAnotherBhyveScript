@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Prepare host for running bhyve guest
+# Prepare host for running bhyve guest (v0.2)
 
 tap=tap42
 bridge=bridge0

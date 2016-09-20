@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Prepare host for running bhyve
+# Prepare host for running bhyve (v0.2)
 
 iface=igb0
 bridge=bridge0
