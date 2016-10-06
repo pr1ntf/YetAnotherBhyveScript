@@ -23,6 +23,7 @@ bhyve \
 	-s 2,ahci-hd,${disk} \
 	-s 4,virtio-net,${tap} \
 	-s 8,${fbuf},tcp=${ip}:${port},${w} \
+	-s 16,xhci,tablet \
 	-s 32,lpc \
 	-l bootrom,${fw} \
 	${name}
