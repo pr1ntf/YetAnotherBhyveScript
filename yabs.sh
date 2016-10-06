@@ -20,9 +20,9 @@ bhyve \
 	-s 0,hostbridge \
 	-s 1,ahci-${mediatype},${media} \
 	-s 2,ahci-hd,${disk} \
-	-s 4,virtio-net,${tap} \
-	-s 8,fbuf,tcp=${ip}:${port},${w} \
-	-s 16,xhci,tablet \
-	-s 32,lpc \
+	-s 4,lpc \
 	-l bootrom,${fw} \
+	-s 8,virtio-net,${tap} \
+	-s 16,fbuf,tcp=${ip}:${port},${w} \
+	-s 32,xhci,tablet \
 	${name} &
