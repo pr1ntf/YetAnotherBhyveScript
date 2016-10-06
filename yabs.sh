@@ -24,5 +24,5 @@ bhyve \
 	-l bootrom,${fw} \
 	-s 8,virtio-net,${tap} \
 	-s 16,fbuf,tcp=${ip}:${port},${w} \
-	-s 32,xhci,tablet \
+	-s 17,xhci,tablet \
 	${name} &
