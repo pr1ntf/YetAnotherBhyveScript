@@ -2,25 +2,27 @@
 
 # Yet Another bhyve Script v0.2
 
-name=win2k8
-ram=1024M
-cpu=1
-disk=win2k8.img
-ss=512
-iso=win2k8.iso
-tap=tap0
-mac=02:03:05:08:13:21
-con=stdio
-fw=BHYVE_UEFI_20151002.fd
+name=win10
+ram=2048M
+cpu=2
+disk=win10.img
+media=
+meidatype=cd
+tap=tap42
+fw=BHYVE_UEFI.fd
+fbuf=fbuf
+ip=127.0.0.1
+port=5901
+w=wait
 
 bhyve \
 	-c ${cpu} -m ${ram} \
 	-H -w \
 	-s 0,hostbridge \
-	-s 3,ahci-hd,${disk},sectorsize=${ss} \
-	-s 4,ahci-cd,${iso} \
-	-s 5,virtio-net,${tap},mac=${mac} \
-	-s 31,lpc \
-	-l com1,${con} \
+	-s 1,ahci-${mediatype},${media} \
+	-s 2,ahci-hd,${disk} \
+	-s 4,virtio-net,${tap} \
+	-s 8,${fbuf},tcp=${ip}:${port},${w} \
+	-s 32,lpc \
 	-l bootrom,${fw} \
 	${name}
