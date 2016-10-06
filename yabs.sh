@@ -25,4 +25,4 @@ bhyve \
 	-s 16,xhci,tablet \
 	-s 32,lpc \
 	-l bootrom,${fw} \
-	${name}
+	${name} &
